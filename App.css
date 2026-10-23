@@ -1,0 +1,397 @@
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 80px;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+color: #263238;
+background: #ffffff;
+line-height: 1.6;
+}
+
+img {
+display: block;
+max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+margin-top: 0;
+}
+
+h1,
+h2 {
+line-height: 1.25;
+}
+
+section {
+width: 100%;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+position: sticky;
+top: 0;
+z-index: 100;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 42px;
+padding: 18px 24px;
+background: #ffffff;
+border-bottom: 1px solid #e5e7eb;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.navbar a {
+color: #263238;
+text-decoration: none;
+font-size: 15px;
+font-weight: 600;
+transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+color: #087f8c;
+}
+
+/* ===== Banner ===== */
+.banner {
+position: relative;
+width: 100%;
+height: 450px;
+overflow: hidden;
+border: 1px solid #ddd;
+}
+
+.banner > img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
+
+.banner-message {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 12px;
+background: rgba(0, 0, 0, 0.65);
+color: white;
+text-align: center;
+font-size: 18px;
+z-index: 2;
+
+opacity: 0;
+transition: opacity 0.4s ease;
+}
+
+.banner:hover .banner-message {
+opacity: 1;
+}
+
+
+
+
+/* ===== About ===== */
+.about {
+max-width: 1000px;
+margin: 0 auto;
+padding: 85px 24px;
+text-align: center;
+}
+
+.about h1,
+.work h1,
+.gallery h1,
+.contact h1 {
+margin-bottom: 35px;
+color: #163c4a;
+font-size: clamp(28px, 4vw, 38px);
+text-align: center;
+}
+
+.my-photo {
+width: 180px;
+height: 180px;
+margin: 0 auto 28px;
+overflow: hidden;
+border-radius: 50%;
+border: 5px solid #e1f2f3;
+box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+}
+
+.my-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.about p {
+max-width: 720px;
+margin: 0 auto 15px;
+color: #58666d;
+font-size: 17px;
+}
+
+/* ===== Projects ===== */
+.work {
+padding: 80px 24px;
+background: #f3f8fa;
+}
+
+.projects {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 28px;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.project {
+overflow: hidden;
+padding-bottom: 25px;
+background: #ffffff;
+border: 1px solid #e5ebee;
+border-radius: 14px;
+box-shadow: 0 5px 20px rgba(25, 60, 75, 0.06);
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 28px rgba(25, 60, 75, 0.12);
+}
+
+.project img {
+width: 100%;
+height: 240px;
+object-fit: cover;
+}
+
+.project h3 {
+margin: 22px 22px 8px;
+color: #163c4a;
+font-size: 21px;
+}
+
+.project p {
+margin: 0 22px;
+color: #68777e;
+}
+.project-info {
+padding: 22px;
+}
+
+.project-info h3 {
+margin: 0 0 12px;
+color: #163c4a;
+font-size: 22px;
+}
+
+.project-info p {
+margin-bottom: 22px;
+color: #58666d;
+line-height: 1.6;
+}
+
+.project-button {
+display: inline-block;
+padding: 11px 22px;
+background: #087f8c;
+color: #ffffff;
+border-radius: 6px;
+text-decoration: none;
+font-size: 15px;
+font-weight: bold;
+transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.project-button:hover {
+background: #065f69;
+transform: translateY(-2px);
+}
+
+.project-button:focus-visible {
+outline: 3px solid #163c4a;
+outline-offset: 3px;
+}
+
+/* ===== Gallery ===== */
+.gallery {
+padding: 80px 24px;
+}
+
+.photo-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 18px;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.photo-grid img {
+width: 100%;
+height: 230px;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+transition: transform 0.25s ease;
+}
+
+.photo-grid img:hover {
+transform: scale(1.03);
+}
+
+/* ===== Contact and Newsletter ===== */
+.contact {
+padding: 80px 24px;
+background: #edf6f7;
+text-align: center;
+}
+
+.contact > p {
+color: #58666d;
+margin-bottom: 35px;
+}
+
+.contact h2 {
+margin-bottom: 22px;
+color: #163c4a;
+font-size: 24px;
+}
+
+.contact form {
+display: flex;
+flex-direction: column;
+align-items: stretch;
+gap: 14px;
+max-width: 480px;
+margin: 0 auto;
+padding: 30px;
+background: #ffffff;
+border-radius: 14px;
+box-shadow: 0 6px 25px rgba(25, 60, 75, 0.07);
+text-align: left;
+}
+
+.contact label {
+font-size: 14px;
+font-weight: 600;
+}
+
+.contact input {
+width: 100%;
+padding: 14px 15px;
+border: 1px solid #cbd7dc;
+border-radius: 8px;
+outline: none;
+font: inherit;
+transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact input:focus {
+border-color: #087f8c;
+box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.12);
+}
+
+.contact button {
+padding: 14px 20px;
+border: none;
+border-radius: 8px;
+background: #087f8c;
+color: #ffffff;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+background: #066570;
+transform: translateY(-1px);
+}
+
+#message {
+margin: 0;
+font-size: 14px;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 768px) {
+.navbar {
+gap: 24px;
+padding: 16px;
+}
+
+.banner {
+min-height: 300px;
+height: 45vh;
+}
+
+.about,
+.work,
+.gallery,
+.contact {
+padding: 60px 20px;
+}
+
+.projects {
+grid-template-columns: 1fr;
+}
+
+.project img {
+height: 260px;
+}
+
+.photo-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.photo-grid img {
+height: 200px;
+}
+}
+
+@media (max-width: 420px) {
+.navbar {
+gap: 18px;
+}
+
+.navbar a {
+font-size: 14px;
+}
+
+.banner {
+min-height: 250px;
+}
+
+.my-photo {
+width: 145px;
+height: 145px;
+}
+
+.photo-grid {
+gap: 12px;
+}
+
+.photo-grid img {
+height: 150px;
+}
+
+.contact form {
+padding: 22px 18px;
+}
+}
